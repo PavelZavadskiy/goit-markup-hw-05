@@ -368,18 +368,20 @@
           </ul>
         </div>
         <div class="footer-subscribe-box">
-          <label>
-            Subscribe
-            <div>
-              <input type="email" name="subscribe-email" placeholder="E-mail" />
-            </div>
-          </label>
-          <button class="btn-footer-subscribe" type="submit">
-            Subscribe
-            <svg class="icon-lable" width="24" height="24">
-              <use href="./images/icons.svg#icon-subscribe"></use>
-            </svg>
-          </button>
+          <div class="footer-subscribe-container">
+            <p class="paragraf">Subscribe</p>
+            <form class="footer-subscribe-form">
+              <label class="footer-subscribe-email-label">
+                <input class="footer-subscribe-email-input" type="email" name="subscribe-email" placeholder="E-mail" />
+              </label>
+              <button class="btn-footer-subscribe" type="submit">
+                Subscribe
+                <svg class="icon-lable-subscribe" width="24" height="24">
+                  <use href="./images/icons.svg#icon-subscribe"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -392,53 +394,58 @@
           </svg>
         </button>
         <p class="paragraf">Leave your contacts and we will call you back</p>
-        <fieldset class="fields-box">
-          <label>
-            Name
-            <div>
-              <svg class="icon-lable" width="24" height="24">
+        <div class="fields-box">
+          <div class="fields-container">
+            <label class="field-lable" for="user-name"> Name </label>
+            <div class="field-input">
+              <input type="text" class="username" name="user-name" id="user-name" />
+              <svg class="icon-lable" width="18" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
-              <input type="text" class="username" name="username" autofocus />
             </div>
-          </label>
-          <label>
-            Phone
-            <div>
-              <svg class="icon-lable" width="24" height="24">
+          </div>
+          <div class="fields-container">
+            <label class="field-lable" for="user-phone"> Phone </label>
+            <div class="field-input">
+              <input type="text" class="username" name="user-phone" id="user-phone" />
+              <svg class="icon-lable" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
-              <input type="tel" name="phone" />
             </div>
-          </label>
-          <label>
-            Email
-            <div>
-              <svg class="icon-lable" width="24" height="24">
+          </div>
+          <div class="fields-container">
+            <label class="field-lable" for="user-email"> Email </label>
+            <div class="field-input">
+              <input type="text" class="username" name="user-email" id="user-email" />
+              <svg class="icon-lable" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
-              <input type="email" name="email" />
             </div>
-          </label>
-          <label>
-            Comment
-            <div>
-              <textarea class="form-input" type="text" name="description" placeholder="Text input"></textarea>
-            </div>
-          </label>
-        </fieldset>
-        <label class="policy-check">
-          <input type="checkbox" name="policy" class="chb-policy visually-hidden" value="policy" />
-          <div class="icon-checkbox-container">
-            <svg class="icon-checkbox" width="10" height="8">
-              <use href="./images/icons.svg#icon-checkbox"></use>
-            </svg>
           </div>
-          <!-- visually-hidden -->
-          I accept the terms and conditions of the <a href="">Privacy Policy</a>
-        </label>
-
-        <button class="btn-callback-send" type="submit">Send</button>
+          <div class="fields-container">
+            <label class="field-lable" for="user-comment"> Comment </label>
+            <textarea class="comment" id="user-comment" name="user-comment" placeholder="Text input"></textarea>
+          </div>
+          <div class="privacy-container">
+            <input
+              type="checkbox"
+              id="user-privacy"
+              name="user-privacy"
+              class="chb-policy visually-hidden"
+              value="true"
+            />
+            <label class="privacy-lable" for="user-privacy">
+              <span class="checkbox-span">
+                <svg class="icon-checkbox" width="10" height="8">
+                  <use href="./images/icons.svg#icon-checkbox"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="privacy-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="btn-callback-send" type="submit">Send</button>
+        </div>
       </div>
     </div>
 

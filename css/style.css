@@ -522,54 +522,46 @@ footer .paragraf {
   align-items: flex-end;
 }
 
-.footer-subscribe-box label {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.footer-subscribe-container .paragraf {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-subscribe-label);
+  margin-bottom: 16px;
 }
 
-.footer-subscribe-box label div {
-  border: 1px solid var(--color-subscribe-label);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  padding: 8px 16px;
+.footer-subscribe-form {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 24px;
+}
+
+.footer-subscribe-email-input {
   width: 264px;
   height: 40px;
+  border: 1px solid var(--color-subscribe-label);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--color-subscribe-label);
 }
 
-.footer-subscribe-box label input {
-  width: 100%;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
+.footer-subscribe-email-input::placeholder {
   color: var(--color-subscribe-label);
-  border: none;
-  outline: none;
-  background-color: transparent;
 }
 
 .btn-footer-subscribe {
+  min-width: 165px;
+  height: 40px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 24px;
-  gap: 16px;
-  background-color: var(--bg-color-btn);
-  border-radius: 4px;
-  border: none;
-  font-style: normal;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -578,12 +570,21 @@ footer .paragraf {
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--color-subscribe-label);
+  cursor: pointer;
+  background-color: var(--bg-color-btn);
+  border: none;
+  border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-footer-subscribe:hover,
 .btn-footer-subscribe:focus {
   background: var(--bg-color-btn-hf);
+}
+
+.icon-lable-subscribe {
+  margin-left: 16px;
+  fill: currentColor;
 }
 
 .portfolio-section {
@@ -756,92 +757,101 @@ footer .paragraf {
   margin-bottom: 16px;
 }
 
-.callback-form .fields-box {
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+.fields-container {
   margin-bottom: 16px;
-  border: none;
 }
 
-.fields-box label {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-style: normal;
+.field-lable {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--color-border-policy);
-  gap: 4px;
+  display: block;
+  margin-bottom: 4px;
 }
 
-.fields-box label div {
+.field-input {
+  position: relative;
+}
+
+.username {
+  width: 100%;
+  height: 40px;
   border: 1px solid var(--color-border-callback);
   border-radius: 4px;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  color: var(--color-text-callback);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.callback-form div:focus-within {
+.username:focus {
   border-color: var(--color-text-callback-hf);
-  color: var(--color-text-callback-hf);
 }
 
 .icon-lable {
-  display: inline-flex;
-  fill: currentColor;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--color-text-callback);
 }
 
-.fields-box label input {
-  border: none;
-  outline: none;
+.username:focus + .icon-lable {
+  fill: var(--color-text-callback-hf);
 }
 
-.fields-box label .form-input,
-.fields-box label .form-input:focus {
-  color: var(--color-text-callback);
-}
-
-.fields-box label .form-input::placeholder {
-  color: var(--color-border-callback);
-}
-
-.fields-box label textarea {
+.comment {
   width: 100%;
-  height: 138px;
-  resize: none;
-  border: none;
-  outline: none;
-}
-
-.fields-box label textarea:focus-within {
-  border-color: var(--color-text-callback-hf);
-  color: var(--color-text-callback-hf);
-}
-
-.policy-check {
-  font-style: normal;
-  font-weight: 400;
+  height: 120px;
   font-size: 12px;
   line-height: 1.17;
-  color: var(--color-border-policy);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 8px;
+  letter-spacing: 0.04em;
+  color: var(--color-border-callback);
+  border: 1px solid var(--color-border-callback);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment:focus {
+  border-color: var(--color-text-callback-hf);
+}
+
+.privacy-container {
   margin-bottom: 24px;
 }
 
-.policy-check a {
+.privacy-lable {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--color-border-policy);
+}
+
+.checkbox-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-border-callback);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.chb-policy:checked + .privacy-lable .checkbox-span {
+  background-color: var(--color-cb-policy-hf);
+}
+
+.privacy-link {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -851,48 +861,22 @@ footer .paragraf {
   color: var(--color-text-callback-hf);
 }
 
-.icon-checkbox-container {
-  border: 1px solid var(--color-border-callback);
-  border-radius: 2px;
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-checkbox {
-  position: absolute;
-  width: 16px;
-  height: 8px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: var(--color-cb-policy);
-}
-
-.chb-policy:checked + .icon-checkbox-container {
-  background-color: var(--color-cb-policy-hf);
-  border: 1px solid var(--color-cb-policy-hf);
-}
-
 .btn-callback-send {
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   display: block;
-  margin: 0 auto;
-  padding: 16px 32px;
-  background: var(--bg-color-btn);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-style: normal;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-btn-text);
+  cursor: pointer;
+  background: var(--bg-color-btn);
   border: none;
+  border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
 }
 
 .btn-callback-send:hover,
