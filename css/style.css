@@ -516,13 +516,9 @@ footer .paragraf {
 }
 
 .footer-subscribe-box {
-  display: flex;
-  gap: 24px;
-  padding: 0;
-  align-items: flex-end;
 }
 
-.footer-subscribe-container .paragraf {
+.footer-subscribe-box .paragraf {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
