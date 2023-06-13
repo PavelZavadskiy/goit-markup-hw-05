@@ -799,7 +799,7 @@ footer .paragraf {
   fill: var(--color-text-callback-hf);
 }
 
-comments-container {
+.comments-container {
   margin-bottom: 16px;
 }
 
